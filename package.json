@@ -1,0 +1,22 @@
+{
+  "name": "npm-vs-repo",
+  "version": "1.1.0",
+  "description": "Compare a npm package with its claimed repo",
+  "main": "index.js",
+  "bin": "./bin/risk",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "find-my-way": "^2.2.1",
+    "righto": "^6.0.1",
+    "uuidv4": "^6.0.0",
+    "write-response": "^1.2.2"
+  }
+}

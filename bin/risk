@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+const {inspect} = require('util')
+const analyseNpm = require('../analyseNpm')
+
+if (!process.argv[2]) {
+  console.log('Must specify an npm repo');
+} else {
+  console.log('Checking "' + process.argv[2] + '"')
+  analyseNpm(process.argv[2], function (error, ...args) {
+    if (error) {
+      throw error
+    }
+
+    args.forEach(arg => {
+      if (!arg) {
+        return;
+      }
+
+      console.log('--------------------------------------')
+
+      console.log(arg)
+
+      console.log('--------------------------------------')
+    })
+  })
+}
