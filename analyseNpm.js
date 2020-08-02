@@ -1,7 +1,7 @@
 const { spawn } = require('child_process');
 
 const fs = require('fs');
-const {uuid} = require('uuidv4');
+const uuid = require('uuid').v4;
 
 const righto = require('righto');
 
@@ -73,6 +73,8 @@ function analyseNpm (npmRepo, callback) {
 
       if (currentRepo.startsWith('git@')) {
         return currentRepo.replace(':', '/').replace('git@', 'https://')
+      } else if (currentRepo.startsWith('git+')) {
+        return currentRepo.replace('git+', '')
       } else {
         return currentRepo
       }
