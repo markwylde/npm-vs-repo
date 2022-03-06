@@ -13,7 +13,7 @@
     "tape": "^4.11.0"
   },
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "find-my-way": "^2.2.1",
     "righto": "^6.0.1",
     "uuid": "^8.3.0",
